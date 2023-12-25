@@ -2,6 +2,54 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.13.
 
+Usado para encapsular o CampoPesquisa para `ANY USAGE` 
+
+## USAGE
+
+````HTML
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>CampoPesquisa</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+  <body>
+
+    <script src="./prototiposAngular/CadCliente/SGE/campo-pesquisa.js" type="module"></script>
+
+    <campo-pesquisa
+      id="Cliente"
+      url="sge_consultas_json.asp">
+    </campo-pesquisa>
+
+    <campo-pesquisa
+      id="Produto"
+      url="sge_consultas_json.asp">
+    </campo-pesquisa>
+
+    <script type="text/javascript">
+
+      const campoPesquisaCliente = document.getElementById("Cliente");
+      campoPesquisaCliente.addEventListener('PesquisaJsonOUT', (event)=>{
+        console.log(event.detail)
+      })
+      const campoPesquisaProduto = document.getElementById("Produto");
+      campoPesquisaProduto.addEventListener('PesquisaJsonOUT', (event)=>{
+        console.log(event.detail.produto)
+      })
+      
+    </script>
+  </body>
+</html>  
+
+
+  
+````  
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
