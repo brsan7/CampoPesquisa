@@ -2,7 +2,11 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.13.
 
-Usado para encapsular o CampoPesquisa para `ANY USAGE` 
+Usado para encapsular o CampoPesquisa para `ANY USAGE`.
+
+Com o bootcamp da DIO, com o irmão Felipão,
+
+E o artigo do irmão Prateek Mishra - (https://blog.bitsrc.io/diving-deep-into-angular-elements-c17a868d6894)
 
 ## USAGE
 
