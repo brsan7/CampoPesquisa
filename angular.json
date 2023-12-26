@@ -17,7 +17,7 @@
         "build": {
           "builder": "ngx-build-plus:build",
           "options": {
-            "outputPath": "C:/inetpub/wwwroot/msobral/prototiposAngular/CadCliente/SGE",
+            "outputPath": "dist/campo-pesquisa",
             "index": "src/index.html",
             "main": "src/main.element.ts",
             "tsConfig": "tsconfig.element.json",
