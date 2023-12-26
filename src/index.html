@@ -1,6 +1,4 @@
-<!doctype html>
-<html lang="en">
-<head>
+<!DOCTYPE html><html lang="pt-BR"><head>
   <meta charset="utf-8">
   <title>CampoPesquisa</title>
   <base href="/">
@@ -9,5 +7,46 @@
 </head>
 <body>
   <app-root></app-root>
-</body>
+    <script src="dist/campo-pesquisa/main.js" type="module"></script>
+
+    <!--https://jsonplaceholder.typicode.com/users/{pesquisa}-->
+    <campo-pesquisa
+      id="users"
+      placeholder="users"
+      url="https://jsonplaceholder.typicode.com">
+    </campo-pesquisa>
+
+    <campo-pesquisa
+      id="albums"
+      placeholder="albums"
+      url="https://jsonplaceholder.typicode.com">
+    </campo-pesquisa>
+
+    <script type="text/javascript">
+
+      const campoPesquisaCliente = document.getElementById("users");
+      campoPesquisaCliente.addEventListener('PesquisaJsonOUT', (event)=>{
+
+        const usuariosJson=event.detail;
+        if(usuariosJson !== false){
+          console.log(usuariosJson)
+          console.log(usuariosJson[0])
+          console.log(usuariosJson[0].name)
+        }
+
+      })
+      const campoPesquisaProduto = document.getElementById("albums");
+      campoPesquisaProduto.addEventListener('PesquisaJsonOUT', (event)=>{
+
+        const albumsJsonEXP=event.detail;
+        if(albumsJsonEXP !== false){
+          console.log(albumsJsonEXP)
+          console.log(albumsJsonEXP[0])
+          console.log(albumsJsonEXP[0].title)
+        }
+
+      })
+
+    </script>
+  </body>
 </html>

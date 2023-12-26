@@ -17,6 +17,8 @@ export class CampoPesquisaComponent {
 
   @Input() id:string = "";
 
+  @Input() placeholder:string = "";
+
   @Input() url:string = "";
 
   @Output() PesquisaJsonOUT = new EventEmitter<any>();

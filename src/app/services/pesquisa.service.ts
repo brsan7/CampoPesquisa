@@ -15,8 +15,8 @@ export class PesquisaService {
   }
 
   requisicaoGet(pesquisa:string, tipoPesquisa:string, url:string):Observable<any>{
-//console.log(`${url}?Tipo=${tipoPesquisa}&Pesquisa=${pesquisa}`)
-    return this.http.get<any>(`${url}?Tipo=${tipoPesquisa}&Pesquisa=${pesquisa}`)
+
+    return this.http.get<any>(`${url}/${tipoPesquisa}/${pesquisa}`)
 
   }
 
